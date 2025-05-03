@@ -38,6 +38,5 @@ export const routes: Routes = [
     {path: 'registroFuncion', component: RegistrarFuncionComponent},
     {path: 'actualizarFuncion/:id', component: ActualizarFuncionComponent},
 
-
     {path: '**', redirectTo: '', pathMatch: 'full'} 
 ];
