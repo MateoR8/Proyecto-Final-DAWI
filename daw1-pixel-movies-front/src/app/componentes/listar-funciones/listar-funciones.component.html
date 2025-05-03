@@ -1,0 +1,44 @@
+<div class="container mt-4">
+    <h2 class="mb-4">Listado de Funciones</h2>
+
+    <div class="mb-3">
+        <button class="btn btn-primary" (click)="irAregistrarFuncion()">
+          <i class="bi bi-plus-circle"></i> Agregar función
+        </button>
+      </div>
+  
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover table-striped align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Fecha de función</th>
+            <th>Código de sala</th>
+            <th>Capacidad de sala</th>
+            <th>Título de película</th>
+            <th>Género de película</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let funcion of funciones">
+            <td>{{ funcion.idFuncion }}</td>
+            <td>{{ funcion.fechaFuncion | date: 'yyyy-MM-dd' }}</td>
+            <td>{{ funcion.objSala.codsala }}</td>
+            <td>{{ funcion.objSala.capacidad }}</td>
+            <td>{{ funcion.objPelicula.nombrepelicula }}</td>
+            <td>{{ funcion.objPelicula.generopelicula }}</td>
+            <td class="text-center">
+                <button class="btn btn-warning btn-sm me-1" (click)="irAactualizarFuncion(funcion.idFuncion)">
+                  <i class="bi bi-pencil"></i> Actualizar
+                </button>
+                <button class="btn btn-danger btn-sm" (click)="eliminarFuncion(funcion.idFuncion)">
+                  <i class="bi bi-trash"></i> Eliminar
+                </button>
+              </td>
+          </tr>          
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

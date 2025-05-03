@@ -34,4 +34,8 @@ public class PeliculaService {
 		return repoPelicula.save(pelicula);
 	}
 	
+	public List<Pelicula> listarPeliculasPorIdioma(String idiomaPelicula) {
+		return repoPelicula.findByIdiomaPelicula(idiomaPelicula);
+	}
+	
 }

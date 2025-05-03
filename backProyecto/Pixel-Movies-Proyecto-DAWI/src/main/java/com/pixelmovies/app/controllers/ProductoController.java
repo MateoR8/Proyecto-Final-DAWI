@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.pixelmovies.app.models.Pelicula;
 import com.pixelmovies.app.models.Producto;
 import com.pixelmovies.app.services.ProductoService;
 
@@ -85,6 +86,16 @@ public class ProductoController {
 			return ResponseEntity.status(HttpStatus.CREATED).body("Producto actualizada: \n" + cambiado);
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al actualizar");
+		}
+	}
+	
+	@GetMapping("/precio/{precioProducto}")
+	public ResponseEntity<List<Producto>> listarProductosPrecio(@PathVariable("precioProducto") double precioProducto) {
+		List<Producto> productos = servicio.listarPorPrecio(precioProducto);
+		if (productos.isEmpty()) {
+			return ResponseEntity.noContent().build();
+		} else {
+			return ResponseEntity.ok(productos);
 		}
 	}
 }

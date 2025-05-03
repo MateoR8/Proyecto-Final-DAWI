@@ -1,5 +1,6 @@
 package com.pixelmovies.app.controllers;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -85,6 +86,16 @@ public class FuncionController {
 			return ResponseEntity.status(HttpStatus.CREATED).body("Funcion actualizada: \n" + cambiado);
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al actualizar");
+		}
+	}
+	
+	@GetMapping("/fecha/{fechaFuncion}")
+	public ResponseEntity<List<Funcion>> listarFuncionesFechas(@PathVariable("fechaFuncion") Date fechaFuncion) {
+		List<Funcion> funciones = servicio.listarFuncionesFechas(fechaFuncion);
+		if (funciones.isEmpty()) {
+			return ResponseEntity.noContent().build();
+		} else {
+			return ResponseEntity.ok(funciones);
 		}
 	}
 }

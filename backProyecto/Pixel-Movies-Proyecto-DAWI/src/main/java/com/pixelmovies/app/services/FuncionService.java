@@ -1,5 +1,6 @@
 package com.pixelmovies.app.services;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,4 +35,8 @@ public class FuncionService {
 	public Funcion actualizarFuncion(Funcion funcion) {
 		return funcionRepo.save(funcion);
 	}	
+	
+	public List<Funcion> listarFuncionesFechas(Date fechaFuncion) {
+		return funcionRepo.findByFechaFuncion(fechaFuncion);
+	}
 }

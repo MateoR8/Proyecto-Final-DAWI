@@ -1,5 +1,6 @@
 package com.pixelmovies.app.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +19,8 @@ public class Pelicula {
 	private String directorpelicula;
 	private String generopelicula;
 	private String duracionpelicula;
-	private String idiomapelicula;
+	@Column(name = "idiomapelicula")
+	private String idiomaPelicula;
 	private String clasificacionpelicula;
 	
 	public int getIdpelicula() {
@@ -52,10 +54,10 @@ public class Pelicula {
 		this.duracionpelicula = duracionpelicula;
 	}
 	public String getIdiomapelicula() {
-		return idiomapelicula;
+		return idiomaPelicula;
 	}
 	public void setIdiomapelicula(String idiomapelicula) {
-		this.idiomapelicula = idiomapelicula;
+		this.idiomaPelicula = idiomapelicula;
 	}
 	public String getClasificacionpelicula() {
 		return clasificacionpelicula;

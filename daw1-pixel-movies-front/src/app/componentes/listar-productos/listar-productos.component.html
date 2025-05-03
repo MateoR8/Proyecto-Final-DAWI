@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <h2 class="mb-3">Listado de Productos</h2>
+  
+    <div class="mb-3">
+      <button class="btn btn-primary" (click)="irAregistrarProducto()">
+        <i class="bi bi-plus-circle"></i> Agregar Producto
+      </button>
+    </div>
+  
+    <div class="table-responsive">
+      <table class="table table-striped table-hover table-bordered align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Nombre Producto</th>
+            <th>Precio</th>
+            <th>Marca</th>
+            <th style="width: 250px;">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productos">
+            <td>{{ producto.idProducto }}</td>
+            <td>{{ producto.nombreProducto }}</td>
+            <td> S/. {{ producto.precioProducto }}</td>
+            <td>{{ producto.marcaProducto }}</td>
+            <td class="text-center">
+              <button class="btn btn-warning btn-sm me-1" (click)="irAactualizarProducto(producto.idProducto)">
+                <i class="bi bi-pencil"></i> Actualizar
+              </button>
+              <button class="btn btn-danger btn-sm" (click)="eliminarProducto(producto.idProducto)"> Eliminar
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

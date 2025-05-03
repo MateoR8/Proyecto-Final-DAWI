@@ -33,4 +33,8 @@ public class ProductoService {
 	public Producto actualizarProducto(Producto prod) {
 		return repoProd.save(prod);
 	}	
+	
+	public List<Producto> listarPorPrecio(double precioProducto) {
+		return repoProd.findByPrecioProductoGreaterThan(precioProducto);
+	}
 }

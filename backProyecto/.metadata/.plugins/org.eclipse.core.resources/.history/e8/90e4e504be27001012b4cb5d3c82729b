@@ -1,0 +1,17 @@
+package com.pixelmovies.app.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.pixelmovies.app.models.Pelicula;
+
+@Repository
+public interface IPeliculaRepository extends JpaRepository<Pelicula, Integer>{
+	
+    @Query(value = "SELECT * FROM Peliculas WHERE IDIOMA_PELI = :idiomaPelicula", nativeQuery = true)
+	List<Pelicula> findByIdiomapelicula(@PathVariable("idiomaPelicula") String idiomaPelicula);
+}

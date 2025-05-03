@@ -32,5 +32,10 @@ public class SalaService {
 
 	public Sala actualizarSala(Sala sala) {
 		return repoSala.save(sala);
-	}	
+	}
+	
+	public List<Sala> listarSalasCapacidad(int capacidad) {
+		return repoSala.findByCapacidadLessThan(capacidad);
+	}
+	
 }

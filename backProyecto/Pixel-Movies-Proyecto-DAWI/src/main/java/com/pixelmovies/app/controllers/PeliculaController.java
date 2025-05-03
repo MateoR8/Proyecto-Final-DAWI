@@ -89,4 +89,14 @@ public class PeliculaController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al actualizar");
 		}
 	}
+	
+	@GetMapping("/idioma/{idiomaPelicula}")
+	public ResponseEntity<List<Pelicula>> listarPeliculasporIdioma(@PathVariable("idiomaPelicula") String idiomaPelicula) {
+		List<Pelicula> peliculas = servicio.listarPeliculasPorIdioma(idiomaPelicula);
+		if (peliculas.isEmpty()) {
+			return ResponseEntity.noContent().build();
+		} else {
+			return ResponseEntity.ok(peliculas);
+		}
+	}
 }
