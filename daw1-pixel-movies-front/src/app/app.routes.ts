@@ -7,6 +7,9 @@ import { ActualizarSalaComponent } from './componentes/actualizar-sala/actualiza
 import { ListarPeliculasComponent } from './componentes/listar-peliculas/listar-peliculas.component'
 import { RegistrarPeliculaComponent } from './componentes/registrar-pelicula/registrar-pelicula.component';
 import { ActualizarPeliculaComponent } from './componentes/actualizar-pelicula/actualizar-pelicula.component';
+import { ListarFuncionesComponent } from './componentes/listar-funciones/listar-funciones.component';
+import { RegistrarFuncionComponent } from './componentes/registrar-funcion/registrar-funcion.component';
+import { ActualizarFuncionComponent } from './componentes/actualizar-funcion/actualizar-funcion.component';
 
 /*---------------------*/
 
@@ -19,6 +22,9 @@ export const routes: Routes = [
     {path: 'listadoPeliculas', component: ListarPeliculasComponent},
     {path: 'registroPelicula', component: RegistrarPeliculaComponent},
     {path: 'actualizarPelicula/:id', component: ActualizarPeliculaComponent},
+    {path: 'listadoFunciones', component: ListarFuncionesComponent},
+    {path: 'registroFuncion', component: RegistrarFuncionComponent},
+    {path: 'actualizarFuncion/:id', component: ActualizarFuncionComponent},
 
     {path: '**', redirectTo: '', pathMatch: 'full'} 
 ];
