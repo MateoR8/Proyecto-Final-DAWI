@@ -25,7 +25,8 @@ import { RegistrarFuncionComponent } from './componentes/registrar-funcion/regis
 import { ActualizarFuncionComponent } from './componentes/actualizar-funcion/actualizar-funcion.component';
 
 export const routes: Routes = [
-    {path: '', component: PrincipalComponent},
+    {path: '', component: LoginComponent},
+    {path: 'PrincipalComponent', component: PrincipalComponent},
     {path: 'LoginComponent', component: LoginComponent},
     {path: 'listadoSalas', component: ListarSalasComponent},
     {path: 'registroSala', component: RegistrarSalaComponent},
