@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Producto } from '../../models/producto';
 import { ProductoService } from '../../services/producto.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-listar-productos',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './listar-productos.component.html',
   styleUrl: './listar-productos.component.css'
 })
@@ -47,6 +48,20 @@ export class ListarProductosComponent {
         error: (err) => {
           console.error('Error al eliminar el producto:', err);
         }
+      });
+    }
+  }
+
+  precioSeleccionado: number = 0;
+
+  filtrarProductos(): void {
+    if (this.precioSeleccionado > 0) {
+      this.productoService.filtrarProductos(this.precioSeleccionado).subscribe(data => {
+        this.productos = data;
+      });
+    } else {
+      this.productoService.listarProductos().subscribe(data => {
+        this.productos = data;
       });
     }
   }

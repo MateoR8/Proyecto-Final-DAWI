@@ -10,6 +10,7 @@ import { FuncionInserto } from '../models/funcion';
 export class FuncionService {
 
   private urlBase = 'http://localhost:8080/api/funciones';
+  private urlFiltro = 'http://localhost:8080/api/funciones/fecha';
 
   constructor(private http: HttpClient) { }
 
@@ -31,6 +32,10 @@ export class FuncionService {
   
     obtenerFuncionPorId(id: number): Observable<Funcion> {
       return this.http.get<Funcion>(`${this.urlBase}/${id}`);
+    }
+
+    filtrarFuncion(fecha: Date): Observable<Funcion[]> {
+      return this.http.get<Funcion[]>(`${this.urlFiltro}/${fecha}`);
     }
 
 }

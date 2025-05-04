@@ -9,6 +9,7 @@ import { Pelicula } from '../models/pelicula';
 export class PeliculaService {
 
   private urlBase = 'http://localhost:8080/api/peliculas';
+  private urlFiltro = 'http://localhost:8080/api/peliculas/idioma';
 
   constructor(private http : HttpClient) {}
 
@@ -32,4 +33,7 @@ export class PeliculaService {
       return this.http.get<Pelicula>(`${this.urlBase}/${id}`);
   }
 
+  filtrarPelicula(idioma: string): Observable<Pelicula[]> {
+    return this.http.get<Pelicula[]>(`${this.urlFiltro}/${idioma}`);
+  }
 }

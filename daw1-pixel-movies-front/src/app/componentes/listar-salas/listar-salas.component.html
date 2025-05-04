@@ -1,11 +1,25 @@
 <div class="container mt-4">
   <h2 class="mb-3">Listado de Salas</h2>
 
-  <!-- Botón Agregar Sala -->
-  <div class="mb-3">
-    <button class="btn btn-primary" (click)="irAregistrarSala()">
-      <i class="bi bi-plus-circle"></i> Agregar Sala
-    </button>
+  <div class="container">
+    <div class="row align-items-end mb-3">
+      <div class="col-md-6">
+        <label for="capacidad" class="form-label">Filtrar Salas por capacidades menores A:</label>
+        <input type="number" class="form-control" id="capacidad" [(ngModel)]="capacidadSeleccionada" name="capacidad" placeholder="Ingrese capacidad mínima">
+      </div>  
+  
+      <div class="col-md-3">
+        <button class="btn btn-secondary w-100" (click)="filtrarSalas()">
+          <i class="bi bi-filter-circle"></i> Filtrar
+        </button>
+      </div>
+  
+      <div class="col-md-3">
+        <button class="btn btn-primary w-100" (click)="irAregistrarSala()">
+          <i class="bi bi-plus-circle"></i> Agregar Sala
+        </button>
+      </div>
+    </div>
   </div>
 
   <div class="table-responsive">

@@ -3,16 +3,18 @@ import { CommonModule } from '@angular/common';
 import { Pelicula } from '../../models/pelicula';
 import { PeliculaService } from '../../services/pelicula.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-listar-peliculas',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './listar-peliculas.component.html',
   styleUrl: './listar-peliculas.component.css'
 })
 export class ListarPeliculasComponent {
 
   peliculas : Pelicula[] = [];
+  idiomas: string[] = [];
 
   constructor(private peliculaService: PeliculaService, private router: Router) {}
 
@@ -20,6 +22,7 @@ export class ListarPeliculasComponent {
     this.peliculaService.listarPeliculas().subscribe(
       data => {
         this.peliculas = data;
+        this.idiomas = [...new Set(data.map(p => p.idiomapelicula))];
       }
     );
   }
@@ -50,4 +53,17 @@ export class ListarPeliculasComponent {
     }
   }
 
+  idiomaSeleccionado: string = '0';
+
+  filtrarPeliculas(): void {
+    if (this.idiomaSeleccionado === '0') {
+      this.peliculaService.listarPeliculas().subscribe(data => {
+        this.peliculas = data;
+      });
+    } else {
+      this.peliculaService.filtrarPelicula(this.idiomaSeleccionado).subscribe(data => {
+        this.peliculas = data;
+      });
+    }
+  }
 }

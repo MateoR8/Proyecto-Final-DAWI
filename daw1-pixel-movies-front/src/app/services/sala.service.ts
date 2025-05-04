@@ -9,6 +9,7 @@ import { Sala } from '../models/sala';
 export class SalaService {
 
   private urlBase = 'http://localhost:8080/api/salas';
+  private urlFiltro = 'http://localhost:8080/api/salas/capacidad';
 
   constructor(private http: HttpClient) {}
 
@@ -30,6 +31,10 @@ export class SalaService {
 
   obtenerSalaPorId(id: number): Observable<Sala> {
     return this.http.get<Sala>(`${this.urlBase}/${id}`);
+  }
+
+  filtrarSalas(capacidad: number): Observable<Sala[]>{
+    return this.http.get<Sala[]>(`${this.urlFiltro}/${capacidad}`);
   }
 
 }

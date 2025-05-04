@@ -3,10 +3,11 @@ import { Funcion } from '../../models/funcion';
 import { FuncionService } from '../../services/funcion.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-listar-funciones',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './listar-funciones.component.html',
   styleUrl: './listar-funciones.component.css'
 })
@@ -44,6 +45,20 @@ export class ListarFuncionesComponent {
         error: (err) => {
           console.error('Error al eliminar la sala:', err);
         }
+      });
+    }
+  }
+
+  fechaSeleccionada!: Date;
+
+  filtrarFuncion(): void {
+    if (this.fechaSeleccionada) {
+      this.funcionService.filtrarFuncion(this.fechaSeleccionada).subscribe(data => {
+        this.funciones = data;
+      });
+    } else {
+      this.funcionService.listarFunciones().subscribe(data => {
+        this.funciones = data;
       });
     }
   }

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Provider } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Producto } from '../models/producto';
 
@@ -9,6 +9,7 @@ import { Producto } from '../models/producto';
 export class ProductoService {
 
   private urlBase = 'http://localhost:8080/api/productos';
+  private urlFiltro = 'http://localhost:8080/api/productos/precio';
 
   constructor(private http: HttpClient) { }
 
@@ -30,4 +31,9 @@ export class ProductoService {
 
   obtenerProductoPorId(id: number): Observable<Producto> {
     return this.http.get<Producto>(`${this.urlBase}/${id}`);
-  }}
+  }
+ 
+  filtrarProductos(precio: number): Observable<Producto[]> {
+    return this.http.get<Producto[]>(`${this.urlFiltro}/${precio}`);
+  }
+}

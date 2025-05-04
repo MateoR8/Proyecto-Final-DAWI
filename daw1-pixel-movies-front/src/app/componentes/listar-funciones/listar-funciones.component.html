@@ -1,11 +1,26 @@
 <div class="container mt-4">
     <h2 class="mb-4">Listado de Funciones</h2>
 
-    <div class="mb-3">
-        <button class="btn btn-primary" (click)="irAregistrarFuncion()">
-          <i class="bi bi-plus-circle"></i> Agregar función
-        </button>
+    <div class="container">
+      <div class="row align-items-end mb-3">
+        <div class="col-md-6">
+          <label for="fechaFuncion" class="form-label">Filtrar por Fecha:</label>
+          <input type="date" id="fechaFuncion" class="form-control" [(ngModel)]="fechaSeleccionada" name="fechaFuncion">
+        </div>
+    
+        <div class="col-md-3">
+          <button class="btn btn-secondary w-100" (click)="filtrarFuncion()">
+            <i class="bi bi-filter-circle"></i> Filtrar
+          </button>
+        </div>
+    
+        <div class="col-md-3">
+          <button class="btn btn-primary w-100" (click)="irAregistrarFuncion()">
+            <i class="bi bi-plus-circle"></i> Agregar Función
+          </button>
+        </div>
       </div>
+    </div>
   
     <div class="table-responsive">
       <table class="table table-bordered table-hover table-striped align-middle">
