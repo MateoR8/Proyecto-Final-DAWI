@@ -10,8 +10,16 @@ export class AdministradorService {
 
   constructor(private http : HttpClient) { }
 
-  private urlLogin = 'http://localhost:8080/api/acceso/login';
+  private baseUrl = 'http://localhost:8080/api/acceso';
 
   loginAdministrador(request: Administrador): Observable<any> {
-    return this.http.post<any>(this.urlLogin, request);
-  }}
+    const url = `${this.baseUrl}/login`;
+    return this.http.post<any>(url, request);
+  }
+
+  registrarNuevoAdmin(admin: Administrador): Observable<Administrador> {
+    const url = `${this.baseUrl}/nuevo`;
+    return this.http.post<Administrador>(url, admin);
+  }
+
+}

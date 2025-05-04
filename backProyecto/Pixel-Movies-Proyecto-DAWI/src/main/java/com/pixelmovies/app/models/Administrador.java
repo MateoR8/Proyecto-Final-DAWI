@@ -27,4 +27,39 @@ public class Administrador {
     @Column(name = "contrasenia_usuario", length = 200, nullable = false)
     private String contrasenia;
 
+	public Integer getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Integer idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public String getNombreUsuario() {
+		return nombreUsuario;
+	}
+
+	public void setNombreUsuario(String nombreUsuario) {
+		this.nombreUsuario = nombreUsuario;
+	}
+
+	public String getNombreUsuarioReal() {
+		return nombreUsuarioReal;
+	}
+
+	public void setNombreUsuarioReal(String nombreUsuarioReal) {
+		this.nombreUsuarioReal = nombreUsuarioReal;
+	}
+
+	public String getContrasenia() {
+		return contrasenia;
+	}
+
+	public void setContrasenia(String contrasenia) {
+		this.contrasenia = contrasenia;
+	}
+    
+    
+    
+
 }

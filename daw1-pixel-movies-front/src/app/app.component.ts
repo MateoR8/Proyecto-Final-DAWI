@@ -17,6 +17,10 @@ export class AppComponent {
     return this.router.url === '/';
   }
 
+  isRegisterRoute(): boolean{
+   return this.router.url === '/registrarAdmin' 
+  }
+
   preguntaCerrarSesion(): void {
     if (confirm('¿Cerrar sesión?')) {
       this.router.navigate([("/")])

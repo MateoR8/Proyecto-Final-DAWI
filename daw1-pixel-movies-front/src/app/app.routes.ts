@@ -23,11 +23,13 @@ import { ActualizarProductoComponent } from './componentes/actualizar-producto/a
 import { ListarFuncionesComponent } from './componentes/listar-funciones/listar-funciones.component';
 import { RegistrarFuncionComponent } from './componentes/registrar-funcion/registrar-funcion.component';
 import { ActualizarFuncionComponent } from './componentes/actualizar-funcion/actualizar-funcion.component';
+import { RegistrarAdminComponent } from './componentes/registrar-admin/registrar-admin.component';
 
 export const routes: Routes = [
     {path: '', component: LoginComponent},
     {path: 'PrincipalComponent', component: PrincipalComponent},
     {path: 'LoginComponent', component: LoginComponent},
+    {path: 'registrarAdmin', component: RegistrarAdminComponent},
     {path: 'listadoSalas', component: ListarSalasComponent},
     {path: 'registroSala', component: RegistrarSalaComponent},
     {path: 'actualizarSala/:id', component: ActualizarSalaComponent},

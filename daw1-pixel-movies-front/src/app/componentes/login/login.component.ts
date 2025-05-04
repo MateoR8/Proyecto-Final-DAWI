@@ -32,4 +32,8 @@ export class LoginComponent {
       }
     });
   }
+
+  aRegistrarNuevoAdmin(): void {
+    this.router.navigate(['/registrarAdmin'])
+  }
 }

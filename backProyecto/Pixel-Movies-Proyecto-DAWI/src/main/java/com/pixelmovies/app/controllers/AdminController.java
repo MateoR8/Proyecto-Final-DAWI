@@ -1,6 +1,7 @@
 package com.pixelmovies.app.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +28,16 @@ public class AdminController {
 			return ResponseEntity.notFound().build();
 		}
 		return ResponseEntity.ok(admin);
+	}
+	
+	@PostMapping("/nuevo")
+	public ResponseEntity<Administrador> agregarAdministrador(@RequestBody Administrador administrador) {
+		try {
+			Administrador nuevoAdmin = service.agregarAdmin(administrador);
+			return ResponseEntity.status(HttpStatus.CREATED).body(nuevoAdmin);
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+		}
 	}
 	
 }
