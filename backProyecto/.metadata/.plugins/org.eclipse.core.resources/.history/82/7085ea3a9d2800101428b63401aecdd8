@@ -1,0 +1,5 @@
+package com.pixelmovies.app.controllers;
+
+public class AdminController {
+
+}

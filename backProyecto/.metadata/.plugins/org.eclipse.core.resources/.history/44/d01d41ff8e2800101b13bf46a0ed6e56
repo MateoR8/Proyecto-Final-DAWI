@@ -1,0 +1,5 @@
+package com.pixelmovies.app.models;
+
+public class Administrador {
+
+}

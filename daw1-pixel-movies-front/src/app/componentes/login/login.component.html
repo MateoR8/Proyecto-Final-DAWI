@@ -1,0 +1,50 @@
+<div class="container">
+    <br><br><br><br><br><br>
+  
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div *ngIf="loginError" class="alert alert-danger">Usuario o contraseña inválidos</div>
+        <div *ngIf="logoutSuccess" class="alert alert-success">Tu sesión fue finalizada con éxito</div>
+  
+        <div class="card">
+          <div class="card-header">
+            <h2 class="text-center">Autenticación de Usuario</h2>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="login()" #loginForm="ngForm">
+              <div class="form-group mb-3">
+                <label class="control-label">Usuario</label>
+                <input
+                  type="text"
+                  id="nombreUsuario"
+                  name="nombreUsuario"
+                  class="form-control"
+                  placeholder="Ingrese el usuario"
+                  [(ngModel)]="nombreUsuario"
+                  required
+                />
+              </div>
+  
+              <div class="form-group mb-3">
+                <label class="control-label">Password</label>
+                <input
+                  type="password"
+                  id="contrasenia"
+                  name="contrasenia"
+                  class="form-control"
+                  placeholder="Ingrese el Password"
+                  [(ngModel)]="contrasenia"
+                  required
+                />
+              </div>
+  
+              <div class="form-group mb-3 text-center">
+                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

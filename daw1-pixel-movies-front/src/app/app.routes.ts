@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { PrincipalComponent } from './componentes/principal/principal.component';
+import { LoginComponent } from "./componentes/login/login.component";
 
 import { ListarSalasComponent } from './componentes/listar-salas/listar-salas.component';
 import { RegistrarSalaComponent } from './componentes/registrar-sala/registrar-sala.component';
@@ -25,6 +26,7 @@ import { ActualizarFuncionComponent } from './componentes/actualizar-funcion/act
 
 export const routes: Routes = [
     {path: '', component: PrincipalComponent},
+    {path: 'LoginComponent', component: LoginComponent},
     {path: 'listadoSalas', component: ListarSalasComponent},
     {path: 'registroSala', component: RegistrarSalaComponent},
     {path: 'actualizarSala/:id', component: ActualizarSalaComponent},

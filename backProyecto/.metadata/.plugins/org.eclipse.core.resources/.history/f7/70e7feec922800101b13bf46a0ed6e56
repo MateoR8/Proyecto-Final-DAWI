@@ -1,0 +1,5 @@
+package com.pixelmovies.app.repositories;
+
+public interface IAdminRepository {
+
+}

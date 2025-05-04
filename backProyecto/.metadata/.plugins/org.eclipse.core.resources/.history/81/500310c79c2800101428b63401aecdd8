@@ -1,0 +1,5 @@
+package com.pixelmovies.app.services;
+
+public class AdminService {
+
+}
