@@ -63,4 +63,12 @@ export class ListarSalasComponent {
     }
   }
 
+  limpiarFiltros(): void {
+    this.capacidadSeleccionada = 0; 
+    this.salaService.listarSalas().subscribe(
+      data => {
+        this.salas = data;
+      }
+    );  
+  }
 }

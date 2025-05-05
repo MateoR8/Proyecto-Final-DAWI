@@ -17,9 +17,8 @@ export class AdministradorService {
     return this.http.post<any>(url, request);
   }
 
-  registrarNuevoAdmin(admin: Administrador): Observable<Administrador> {
-    const url = `${this.baseUrl}/nuevo`;
-    return this.http.post<Administrador>(url, admin);
+  public registrarNuevoAdmin(administrador: Administrador): Observable<any> {
+    return this.http.post<any>(this.baseUrl, administrador);  
   }
 
 }

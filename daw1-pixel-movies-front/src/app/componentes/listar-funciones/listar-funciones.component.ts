@@ -49,7 +49,7 @@ export class ListarFuncionesComponent {
     }
   }
 
-  fechaSeleccionada!: Date;
+  fechaSeleccionada: Date | null = null;
 
   filtrarFuncion(): void {
     if (this.fechaSeleccionada) {
@@ -61,6 +61,15 @@ export class ListarFuncionesComponent {
         this.funciones = data;
       });
     }
+  }
+
+  limpiarFiltros(): void {
+    this.fechaSeleccionada = null;
+    this.funcionService.listarFunciones().subscribe(
+      data => {
+        this.funciones = data;
+      }
+    );  
   }
 
 }

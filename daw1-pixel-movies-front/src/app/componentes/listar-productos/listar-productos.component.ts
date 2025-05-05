@@ -66,4 +66,13 @@ export class ListarProductosComponent {
     }
   }
 
+  limpiarFiltros(): void {
+    this.precioSeleccionado = 0; 
+    this.productoService.listarProductos().subscribe(
+      data => {
+        this.productos = data;
+      }
+    );  
+  }
+
 }

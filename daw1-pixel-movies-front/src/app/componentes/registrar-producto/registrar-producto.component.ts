@@ -35,4 +35,7 @@ export class RegistrarProductoComponent {
       }
     );
   }
+  volverListado(): void {
+    this.router.navigate(['/listadoProductos']);
+  }
 }

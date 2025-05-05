@@ -20,5 +20,4 @@ public class AdminService {
 	public Administrador agregarAdmin(Administrador administrador) {
 		return adminRepo.save(administrador);
 	}
-	
 }

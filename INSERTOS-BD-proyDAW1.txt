@@ -51,8 +51,8 @@ insert into tb_funciones (FECHA_FUNCION, IDPELICULA, IDSALA) values ('2025-08-15
 insert into tb_funciones (FECHA_FUNCION, IDPELICULA, IDSALA) values ('2025-06-12',6,6);
 
 /*Insert en Admin*/
-INSERT INTO tb_admin (contrasenia_usuario, nombre_usuario, nombre_usuario_real) VALUES ('1234', 'admin', 'Administrador Principal');
-INSERT INTO tb_admin (contrasenia_usuario, nombre_usuario, nombre_usuario_real) VALUES ('abcd', 'juan23', 'Juan Pérez');
-INSERT INTO tb_admin (contrasenia_usuario, nombre_usuario, nombre_usuario_real) VALUES ('pass1', 'maria_l', 'María López');
-INSERT INTO tb_admin (contrasenia_usuario, nombre_usuario, nombre_usuario_real) VALUES ('qwerty', 'carlos98', 'Carlos Ruiz');
-INSERT INTO tb_admin (contrasenia_usuario, nombre_usuario, nombre_usuario_real) VALUES ('adminpass', 'luciaM', 'Lucía Martínez');
+INSERT INTO tb_admin (contrasenia, nombre_usuario, nombre_usuario_real) VALUES ('1234', 'admin', 'Administrador Principal');
+INSERT INTO tb_admin (contrasenia, nombre_usuario, nombre_usuario_real) VALUES ('abcd', 'juan23', 'Juan Pérez');
+INSERT INTO tb_admin (contrasenia, nombre_usuario, nombre_usuario_real) VALUES ('pass1', 'maria_l', 'María López');
+INSERT INTO tb_admin (contrasenia, nombre_usuario, nombre_usuario_real) VALUES ('qwerty', 'carlos98', 'Carlos Ruiz');
+INSERT INTO tb_admin (contrasenia, nombre_usuario, nombre_usuario_real) VALUES ('adminpass', 'luciaM', 'Lucía Martínez');

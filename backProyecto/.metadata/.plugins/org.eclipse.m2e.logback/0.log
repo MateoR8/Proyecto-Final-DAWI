@@ -175,3 +175,33 @@
 2025-05-03 23:18:13,683 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-05-03 23:18:13,686 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-05-03 23:18:13,688 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources
+2025-05-04 16:35:43,733 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-05-04 16:35:48,233 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-04 16:35:48,256 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-04 16:35:48,260 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources
+2025-05-04 16:41:09,318 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-04 16:41:09,323 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-04 16:41:09,328 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources
+2025-05-04 16:44:52,903 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-05-04 16:44:58,979 [Worker-0: Launching Pixel-Movies-Proyecto-DAWI - Daw1ProyFinalPixelMoviesApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-04 16:44:59,001 [Worker-0: Launching Pixel-Movies-Proyecto-DAWI - Daw1ProyFinalPixelMoviesApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-04 16:44:59,007 [Worker-0: Launching Pixel-Movies-Proyecto-DAWI - Daw1ProyFinalPixelMoviesApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources
+2025-05-04 17:38:21,836 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-04 17:38:21,841 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-04 17:38:21,844 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources
+2025-05-04 17:44:27,179 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-04 17:44:27,185 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-04 17:44:27,187 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources
+2025-05-04 17:47:10,374 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-04 17:47:10,378 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-04 17:47:10,380 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources
+2025-05-04 18:33:53,577 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-04 18:33:53,587 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-04 18:33:53,590 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources
+2025-05-04 18:33:55,739 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-04 18:33:55,743 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-04 18:33:55,745 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources
+2025-05-04 18:54:47,160 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-05-04 18:55:02,611 [Worker-9: Launching Pixel-Movies-Proyecto-DAWI - Daw1ProyFinalPixelMoviesApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-04 18:55:02,627 [Worker-9: Launching Pixel-Movies-Proyecto-DAWI - Daw1ProyFinalPixelMoviesApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-04 18:55:02,632 [Worker-9: Launching Pixel-Movies-Proyecto-DAWI - Daw1ProyFinalPixelMoviesApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mateo\Desktop\Cibertec - Ciclo V\DAWI\PF\backProyecto\Pixel-Movies-Proyecto-DAWI\src\test\resources

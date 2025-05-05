@@ -66,4 +66,13 @@ export class ListarPeliculasComponent {
       });
     }
   }
+
+  limpiarFiltros(): void {
+    this.idiomaSeleccionado = '0'; 
+    this.peliculaService.listarPeliculas().subscribe(
+      data => {
+        this.peliculas = data;
+      }
+    );  
+  }
 }

@@ -30,7 +30,7 @@ public class AdminController {
 		return ResponseEntity.ok(admin);
 	}
 	
-	@PostMapping("/nuevo")
+	@PostMapping()
 	public ResponseEntity<Administrador> agregarAdministrador(@RequestBody Administrador administrador) {
 		try {
 			Administrador nuevoAdmin = service.agregarAdmin(administrador);

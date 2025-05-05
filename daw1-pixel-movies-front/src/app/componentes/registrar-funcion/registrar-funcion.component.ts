@@ -61,4 +61,8 @@ export class RegistrarFuncionComponent {
       }
     );
   }
+
+  volverListado(): void {
+    this.router.navigate(['/listadoFunciones']);
+  }
 }

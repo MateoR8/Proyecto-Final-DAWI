@@ -1,6 +1,5 @@
 package com.pixelmovies.app.models;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,23 +14,16 @@ public class Administrador {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_usuario")
-    private Integer idUsuario;
-
-    @Column(name = "nombre_usuario", length = 200, nullable = false)
+    private int idUsuario;
     private String nombreUsuario;
-
-    @Column(name = "nombre_usuario_real", length = 200, nullable = false)
     private String nombreUsuarioReal;
-
-    @Column(name = "contrasenia_usuario", length = 200, nullable = false)
     private String contrasenia;
 
-	public Integer getIdUsuario() {
+	public int getIdUsuario() {
 		return idUsuario;
 	}
 
-	public void setIdUsuario(Integer idUsuario) {
+	public void setIdUsuario(int idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 

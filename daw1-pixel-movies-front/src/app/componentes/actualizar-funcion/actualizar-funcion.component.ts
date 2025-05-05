@@ -67,4 +67,8 @@ export class ActualizarFuncionComponent implements OnInit{
     });
   }
 
+  volverListado(): void {
+    this.router.navigate(['/listadoFunciones']);
+  }
+
 }

@@ -42,4 +42,8 @@ export class ActualizarSalaComponent implements OnInit {
     });
   }
 
+  volverListado(): void {
+    this.router.navigate(['/listadoSalas']);
+  }
+
 }

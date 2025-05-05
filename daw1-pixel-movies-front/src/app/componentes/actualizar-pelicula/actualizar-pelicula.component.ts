@@ -47,4 +47,7 @@ export class ActualizarPeliculaComponent {
     });
   }
 
+  volverListado(): void {
+    this.router.navigate(['/listadoPeliculas']);
+  }
 }

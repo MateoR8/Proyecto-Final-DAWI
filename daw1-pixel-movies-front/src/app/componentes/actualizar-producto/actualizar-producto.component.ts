@@ -44,4 +44,7 @@ export class ActualizarProductoComponent {
     });
   }
 
+  volverListado(): void {
+    this.router.navigate(['/listadoProductos']);
+  }
 }

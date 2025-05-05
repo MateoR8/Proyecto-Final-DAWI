@@ -3,7 +3,7 @@
 
     <div class="container">
       <div class="row align-items-end mb-3">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <label for="fechaFuncion" class="form-label">Filtrar por Fecha:</label>
           <input type="date" id="fechaFuncion" class="form-control" [(ngModel)]="fechaSeleccionada" name="fechaFuncion">
         </div>
@@ -11,6 +11,12 @@
         <div class="col-md-3">
           <button class="btn btn-secondary w-100" (click)="filtrarFuncion()">
             <i class="bi bi-filter-circle"></i> Filtrar
+          </button>
+        </div>
+
+        <div class="col-md-2">
+          <button class="btn btn-danger w-100" (click)="limpiarFiltros()">
+            <i class="bi bi-plus-circle"></i> Limpiar Filtros
           </button>
         </div>
     

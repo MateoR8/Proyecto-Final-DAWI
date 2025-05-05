@@ -35,4 +35,8 @@ export class RegistrarSalaComponent {
     );
   }
 
+  volverListado(): void {
+    this.router.navigate(['/listadoSalas']);
+  }
+
 }

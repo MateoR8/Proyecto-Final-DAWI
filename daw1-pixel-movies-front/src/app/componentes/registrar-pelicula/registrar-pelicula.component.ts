@@ -38,5 +38,8 @@ export class RegistrarPeliculaComponent {
       }
     );
   }
+  volverListado(): void {
+    this.router.navigate(['/listadoPeliculas']);
+  }
 
 }
