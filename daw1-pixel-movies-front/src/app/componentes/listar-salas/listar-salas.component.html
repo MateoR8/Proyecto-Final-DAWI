@@ -28,31 +28,24 @@
     </div>
   </div>
 
-  <div class="table-responsive">
-    <table class="table table-striped table-hover table-bordered align-middle">
-      <thead class="table-dark">
-        <tr>
-          <th>ID</th>
-          <th>Código</th>
-          <th>Capacidad</th>
-          <th style="width: 250px;">Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let sala of salas">
-          <td>{{ sala.idsala }}</td>
-          <td>{{ sala.codsala }}</td>
-          <td>{{ sala.capacidad }}</td>
-          <td class="text-center">
-            <button class="btn btn-warning btn-sm me-1" (click)="irAactualizarSala(sala.idsala)">
-              <i class="bi bi-pencil"></i> Actualizar
-            </button>
-            <button class="btn btn-danger btn-sm" (click)="eliminarSala(sala.idsala)"> Eliminar
-              <i class="bi bi-trash"></i>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="col-md-9 mx-auto text-center">
+    <h3 class="text-center titulo">Salas</h3>
+    <div class="contenedor d-flex justify-content-center align-items-center flex-column">
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4" *ngFor="let sala of salas">
+          <div class="card shadow-sm">
+            <img src="assets/imgs/salas.webp" class="componenteImg" alt="Imagen de Sala">
+            <div class="card-body">
+              <h5 class="card-title">Código: {{ sala.codsala }}</h5>
+              <p class="card-text">ID: {{ sala.idsala }}</p>
+              <p class="card-text">Capacidad: {{ sala.capacidad }}</p>
+
+              <button class="btn btn-info me-2" (click)="irAactualizarSala(sala.idsala)">Actualizar</button>
+              <button class="btn btn-danger" (click)="eliminarSala(sala.idsala)">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
 </div>

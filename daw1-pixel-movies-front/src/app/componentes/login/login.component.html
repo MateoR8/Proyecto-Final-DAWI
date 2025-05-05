@@ -1,19 +1,22 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="fondo-gif">
+  <img src="assets/imgs/login.gif" alt="Fondo animado de películas" loading="lazy">
+</div>
 <div class="container">
-
-  <button class="btn btn-success position-absolute top-0 end-0 m-3" (click)="aRegistrarNuevoAdmin()">
-    Agregar nuevo
-  </button>
-
-    <br><br><br><br><br><br>
-  
+ 
     <div class="row">
-      <div class="col-md-6 offset-md-3">
+      <div class="login-form-container">
         <div *ngIf="loginError" class="alert alert-danger">Usuario o contraseña inválidos</div>
         <div *ngIf="logoutSuccess" class="alert alert-success">Tu sesión fue finalizada con éxito</div>
   
         <div class="card">
           <div class="card-header">
-            <h2 class="text-center">Autenticación de Usuario</h2>
+            <h2 class="text-center">Iniciar Sesión</h2>
           </div>
           <div class="card-body">
             <form (ngSubmit)="login()" #loginForm="ngForm">
@@ -42,7 +45,13 @@
                   required
                 />
               </div>
-  
+
+              <div class="text-left mt-2">
+                <a href="http://localhost:4200/registrarAdmin" (click)="aRegistrarNuevoAdmin()" style="text-decoration: none;">Agregar nuevo usuario</a>
+              </div>
+              <br>
+              <br>
+              <br>
               <div class="form-group mb-3 text-center">
                 <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Iniciar Sesión</button>
               </div>
@@ -53,3 +62,6 @@
     </div>
   </div>
   
+  <div class="login-footer">
+    <img src="assets/imgs/logoFinalBlanco.png" alt="Logo Final">
+  </div>

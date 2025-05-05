@@ -22,39 +22,30 @@
     
         <div class="col-md-3">
           <button class="btn btn-primary w-100" (click)="irAregistrarProducto()">
-            <i class="bi bi-plus-circle"></i> Agregar Sala
+            <i class="bi bi-plus-circle"></i> Agregar Producto
           </button>
         </div>
       </div>
     </div>
   
-    <div class="table-responsive">
-      <table class="table table-striped table-hover table-bordered align-middle">
-        <thead class="table-dark">
-          <tr>
-            <th>ID</th>
-            <th>Nombre Producto</th>
-            <th>Precio</th>
-            <th>Marca</th>
-            <th style="width: 250px;">Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let producto of productos">
-            <td>{{ producto.idProducto }}</td>
-            <td>{{ producto.nombreProducto }}</td>
-            <td> S/. {{ producto.precioProducto }}</td>
-            <td>{{ producto.marcaProducto }}</td>
-            <td class="text-center">
-              <button class="btn btn-warning btn-sm me-1" (click)="irAactualizarProducto(producto.idProducto)">
-                <i class="bi bi-pencil"></i> Actualizar
-              </button>
-              <button class="btn btn-danger btn-sm" (click)="eliminarProducto(producto.idProducto)"> Eliminar
-                <i class="bi bi-trash"></i>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="col-md-9 mx-auto text-center">
+      <h3 class="text-center titulo">Productos</h3>
+      <div class="contenedor d-flex justify-content-center align-items-center flex-column">
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4" *ngFor="let producto of productos">
+            <div class="card shadow-sm">
+              <img src="assets/imgs/productos.webp" class="componenteImg" alt="Imagen de Producto">
+              <div class="card-body">
+                <h5 class="card-title">{{ producto.nombreProducto }}</h5>
+                <p class="card-text">Precio: S/. {{ producto.precioProducto }}</p>
+                <p class="card-text">Marca: {{ producto.marcaProducto }}</p>
+  
+                <button class="btn btn-info me-2" (click)="irAactualizarProducto(producto.idProducto)">Actualizar</button>
+                <button class="btn btn-danger" (click)="eliminarProducto(producto.idProducto)">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>

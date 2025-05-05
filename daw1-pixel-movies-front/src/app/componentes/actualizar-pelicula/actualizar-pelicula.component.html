@@ -33,9 +33,13 @@
       </div>
   
       <!-- Botón Actualizar -->
-      <button type="submit" class="btn btn-success" [disabled]="peliculaForm.invalid">
-        <i class="bi bi-save"></i> Actualizar Pelicula
-      </button>
-      <button type="button" class="btn btn-secondary" (click)="volverListado()">Volver al Listado</button>
+
+
+      <div class="d-flex gap-3 mt-4">
+        <button type="submit" class="btn btn-success" [disabled]="peliculaForm.invalid">
+          <i class="bi bi-save"></i> Actualizar Pelicula
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="volverListado()">Volver al Listado</button>
+      </div>
     </form>
   </div>

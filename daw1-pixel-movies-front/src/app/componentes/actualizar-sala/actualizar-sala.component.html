@@ -13,8 +13,12 @@
                 name="capacidad">
         </div>
 
-        <button type="submit" class="btn btn-primary" [disabled]="formSala.invalid"> <i class="bi bi-pencil-square"></i> Actualizar Sala </button>
+
+
+        <div class="d-flex gap-3 mt-4">
+            <button type="submit" class="btn btn-primary" [disabled]="formSala.invalid"> <i class="bi bi-pencil-square"></i> Actualizar Sala </button>
         
-        <button type="button" class="btn btn-secondary" (click)="volverListado()">Volver al Listado</button>
+            <button type="button" class="btn btn-secondary" (click)="volverListado()">Volver al Listado</button>
+          </div>
     </form>
 </div>
